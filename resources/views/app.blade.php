@@ -21,9 +21,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     <link rel="stylesheet" href="{{ asset('plugins/toastr/toastr.min.css') }}">
 
-    <script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
+    <!-- <script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script> -->
 
-    <script src="{{ asset('plugins/jquery/jquery.js') }}"></script>
+    <script src="{{ URL::asset('plugins/jquery/jquery.js') }}"></script>
 
     <script src="{{ URL::asset('/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
@@ -31,13 +31,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     <script src="{{ asset('plugins/toastr/toastr.min.js') }}"></script>
 
-    <script>
-        @if(session()->has('success')),
-            toastr.success('{{ session('success') }}', 'BERHASIL!');
-        @elseif(session()->has('error')),
-            toastr.error('{{ session('error') }}', 'GAGAL!');
-        @endif
-    </script>
+    <!-- <script>
+        if(session()>has("success"))
+            toastr.success("{{ session('success') }}", 'BERHASIL!');
+        elseif(session()>has('error'))
+            toastr.error("{{ session('error') }}", 'GAGAL!');
+        endif
+    </script> -->
 
 </head>
 
@@ -52,10 +52,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="/dashboard" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item d-none d-sm-inline-block">
-                    <a href="#" class="nav-link">Contact</a>
+                    <a href="/" class="nav-link">Home</a>
                 </li>
             </ul>
         </nav>
@@ -65,7 +62,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
             <a href="" class="brand-link">
-                <img src="{{ asset('img/AdminLTELogo.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+                <img src="{{ asset('img/FF.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
                     style="opacity: .8">
                 <span class="brand-text font-weight-light">Kasir</span>
             </a>
@@ -75,10 +72,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <!-- Sidebar user panel (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
-                        <img src="{{ asset('img/user1-128x128.jpg') }}" class="img-circle elevation-2" alt="User Image">
+                        <img src="{{ asset('img/ellen.png') }}" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">Alexander Pierce</a>
+                        <a href="#" class="d-block">Harry Potter</a>
                     </div>
                 </div>
 
@@ -168,9 +165,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <footer class="main-footer">
             <!-- To the right -->
             <div class="float-right d-none d-sm-inline">
-
-                Ujian Kemampuan Kompetensi
-
+    
                 </div>
             <!-- Default to the left -->
             <strong>Copyright &copy; 2024-2025 <a
